@@ -7,3 +7,21 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require 'Faker'
+10.times do
+  owner = User.create(
+    username: Faker::Internet.username,
+    email: Faker::Internet.email,
+    password: Faker::Internet.password(min_length: 6),
+    location: Faker::Address.city,
+    phone_number: Faker::PhoneNumber.phone_number
+  )
+  friend = Creature.new(
+    name: Faker::Creature::Cat.name,
+    planet_location: Faker::Space.planet,
+    details: nil,
+    price: rand(1..200)
+  )
+  friend.user = owner
+  friend.save
+end
