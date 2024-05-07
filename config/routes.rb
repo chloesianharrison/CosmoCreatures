@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :creatures
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :creatures, only: [:index]
 end
