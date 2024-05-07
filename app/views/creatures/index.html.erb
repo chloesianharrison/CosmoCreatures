@@ -1,0 +1,19 @@
+
+<div class = "container">
+<h1>List all creatures</h1>
+
+<% @creatures.each do |creature| %>
+  <%# link for the show page %>
+  <%# <%= link_to creature_path do %>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <h1 class="card-title"><%= creature.name %></h1>
+    <div class=card-body">
+      <h2><%= creature.planet_location %></h2>
+      <%= creature.details %>
+      <p>£<%= creature.price %>0 per day</p>
+    </div>
+  </div>
+  <%# <% end %>
+<% end %>
+</div>
