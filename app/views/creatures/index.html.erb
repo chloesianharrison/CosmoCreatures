@@ -1,0 +1,13 @@
+
+<div class = "container">
+<h1>List all creatures</h1>
+
+<% @creatures.each do |creature| %>
+<div class="card">
+<%= creature.name %>
+<%= creature.planet_location %>
+<%= creature.details %>
+<p>£<%= creature.price %>per day</p>
+</div>
+<% end %>
+</div>
