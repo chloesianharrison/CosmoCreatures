@@ -4,10 +4,13 @@
 
 <% @creatures.each do |creature| %>
 <div class="card">
-<%= creature.name %>
-<%= creature.planet_location %>
+<img src="..." class="card-img-top" alt="...">
+<h1 class="card-title"><%= creature.name %></h1>
+<div class=card-body">
+<h2><%= creature.planet_location %></h2>
 <%= creature.details %>
-<p>£<%= creature.price %>per day</p>
+<p>£<%= creature.price %>0 per day</p>
+</div>
 </div>
 <% end %>
 </div>
