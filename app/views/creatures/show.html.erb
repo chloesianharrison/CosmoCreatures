@@ -1,9 +1,12 @@
 <nav class="d-flex navbar-lewagon m-0">
-<p>logo</p>
-<%= link_to "Add a new creature", new_creature_path %>
-<p>Rent a creature</p>
-<p>Your creatures</p>
-<p>Your bookings</p>
+  <p class="m-3"><i class="fa-solid fa-user-astronaut"></i></p>
+  <div class="d-flex">
+    <%= link_to "Add a new creature", new_creature_path, class:"m-3" %>
+    <%= link_to "Back to creatures", creatures_path, class:"m-3" %>
+    <a href="#" class="m-3">Your creatures</a>
+    <a href="#" class="m-3">Your playtimes</a>
+    <%= link_to "Log out", destroy_user_session_path, class: "m-3" %>
+  </div>
 </nav>
 
 
@@ -18,4 +21,3 @@
 <button type="button"><%= link_to "Book me!", new_creature_playtime_path(@creature) %></button>
 
 </div>
-
