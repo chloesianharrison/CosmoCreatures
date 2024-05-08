@@ -15,11 +15,13 @@
 <% @creatures.each do |creature| %>
   <%# link for the show page %>
   <%# <%= link_to creature_path(creature) do %>
-  <div class="index-card card m-4">
+  <div class="index-card card m-4 text-start">
+    <div class="img-cont">
     <%# <img src="https://res.cloudinary.com/dsxdpqxra/image/upload/v1715101180/CosmoCreatures/big-ears-cute-creature_r5orh4.jpg" alt=""> %>
-    <%= cl_image_tag("CosmoCreatures/big-ears-cute-creature_r5orh4.jpg", width: 300, height: 300, class:"index-img") %>
-    <h2 class="card-title"><%= creature.name %></h2>
-    <div class=card-body">
+      <%= cl_image_tag("CosmoCreatures/big-ears-cute-creature_r5orh4.jpg", width: 300, height: 300, class:"index-img") %>
+    </div>
+    <div class=card-text">
+      <h2><%= creature.name %></h2>
       <h3><%= creature.planet_location %></3>
       <%= creature.details %>
       <p>£<%= creature.price %>0 per day</p>
