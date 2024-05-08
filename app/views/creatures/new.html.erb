@@ -1,11 +1,25 @@
-<div class= "container">
+
+
+<nav class="d-flex navbar-lewagon m-0">
+<p>logo</p>
+<%= link_to "Add a new creature", new_creature_path %>
+<p>Rent a creature</p>
+<p>Your creatures</p>
+<p>Your bookings</p>
+ <%= link_to "Back to creatures", creatures_path %>
+</nav>
+
+<div class="container">
   <h1>Add a new creature</h1>
 
-  <div>
+   <div>
     <%= render "form", creature: @creature %>
   </div>
+
 
   <div>
     <%= link_to "Back to creatures", creatures_path %>
   </div>
-</div>
+
+<div>
+

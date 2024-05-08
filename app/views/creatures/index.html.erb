@@ -18,7 +18,7 @@
   <div class="index-card card m-4 text-start">
     <div class="img-cont">
     <%# <img src="https://res.cloudinary.com/dsxdpqxra/image/upload/v1715101180/CosmoCreatures/big-ears-cute-creature_r5orh4.jpg" alt=""> %>
-      <%= cl_image_tag("big-ears-cute-creature.jpg", width: 300, height: 300, class:"index-img") %>
+      <%= cl_image_tag creature.photo.key, width: 300, height: 300, class:"index-img" %>
     </div>
     <div class="card-text">
       <h2><%= creature.name %></h2>
