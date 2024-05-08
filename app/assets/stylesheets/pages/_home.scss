@@ -1,1 +1,76 @@
 // Specific CSS for your home-page
+.space{
+  text-align: center;
+  margin: 20px;
+}
+
+.fascinate-regular {
+  font-family: "Fascinate", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#margin{
+  border-bottom: lightgrey;
+  background-color: lightgrey;
+  height: 100%;
+}
+
+.box{
+  width: auto;
+  border: 10px solid dark grey;
+  padding: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 20px;
+}
+
+.title {
+  width: 500px;
+  border: 10px solid dark grey;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  border-radius: 20px;
+  background: darkgrey;
+}
+
+
+#background{
+  background-color: white;
+}
+
+
+.container {
+  display: flex;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.item {
+  flex-grow: 1;
+  width: 300px;
+  display: flex;
+  background: lightgrey;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.item + .item {
+  margin-left: 10%;
+}
+
+
+.center{
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box{
+  background-color: lightgrey;
+}

@@ -1,22 +1,37 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
 </head>
-<body>
 
-<% <div style= "background-image: url('<%=./assets/images/galaxy.jpg%>')"> %>
+<body id="background">
 
-  <h1 class="title fascinate-regular"><center>Cosmo Creatures</center></h1>
-  <div class="center">
-    <%= link_to "Explore Creatures", creatures_path, class: "btn" %>
   <div>
-    <p>
-      Welcome to Cosmo Creatures, your premier destination for renting out otherworldly creatures!
-      At Cosmo Creatures, we believe that the wonders of the universe shouldn't be limited to the pages of science fiction.
-      That's why we specialize in offering a unique and unforgettable experience by providing a diverse selection of alien animals for hire
-    </p>
-  </div>
-  </div>
+    <div>
+      <h1 class="fascinate-regular"><center>Cosmo Creatures</center></h1>
+    </div>
+    <div class="space">
+      <%= link_to "Explore Creatures🛸", creatures_path, class: "btn" %>
+    </div>
+
+    <div class="space box">
+      <p>
+        Welcome to Cosmo Creatures, your premier destination for renting out otherworldly creatures!
+        At Cosmo Creatures, we believe that the wonders of the universe shouldn't be limited to the pages of science fiction.
+        That's why we specialize in offering a unique and unforgettable experience by providing a diverse selection of alien animals for hire
+      </p>
+    </div>
+
+    <div class="container center">
+      <div class="item"><h6><center>Jupiter<center><br>In the fantastical world of Jupiter, vibrant Skywhisps drift through colorful clouds, while elusive Stormstalkers hunt amidst the storms. Crystaline Leviathans roam the depths, and Nimbus Sirens sing melodies that shape reality, painting a picture of a celestial realm alive with wonder and mystery.<br></h6></div>
+      <div class="item"><h6><center>Mars<center><br>In the speculative realm of Mars, crimson deserts stretch beneath a dusty sky. Winged Sandstalkers glide through the thin atmosphere, while beneath the surface, Tunneling Drifters carve intricate networks. And amidst ancient canyons, Dust Manticores prowl, their metallic hides glinting in the dim sunlight, painting a portrait of a world both harsh and mesmerizing.<br></h6></div>
+      <div class="item"><h6><center>Uranus<center><br>In the imaginative expanse of Uranus, vast azure swirls cloak the icy realm. Ethereal Frost Fliers dance amidst frozen clouds, while elusive Whispering Shadows drift through the frigid mists. Deep within icy caverns, Crystaline Frostwyrms slumber, their crystalline forms reflecting the distant sunlight, weaving a tale of a world steeped in chill and mystery.<br></h6></div>
+      <div class="item"><h6><center>Pluto<center><br>In the whimsical domain of Pluto, where shadows reign in perpetual twilight, frosty plains stretch beneath a starry sky. Glacial Ghosts glide through the icy haze, while beneath the surface, Tundra Tunnellers burrow through frozen tunnels. And amid the ancient peaks, Twilight Terrors prowl, their translucent forms shimmering with the faint light of distant stars, crafting a portrait of a world cloaked in enigmatic beauty.<br></h6></div>
+    </div>
+
+
   </div>
 </body>
+
+
+<%# <h2><center>Read about the different planets!</center></h3> %>
