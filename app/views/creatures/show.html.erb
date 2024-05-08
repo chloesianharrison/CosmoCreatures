@@ -1,4 +1,21 @@
-<h1>Cosmo Creature 1</h1>
-<img src="https://files.slack.com/files-tmb/T02NE0241-F071Q00RX8F-3a77445757/big-ears-cute-creature.jpg_720.png" width="500" height="600">
+<nav class="d-flex navbar-lewagon m-0">
+<p>logo</p>
+<%= link_to "Add a new creature", new_creature_path %>
+<p>Rent a creature</p>
+<p>Your creatures</p>
+<p>Your bookings</p>
+</nav>
+
+
+<div class="container">
+<h1><%= @creature.name %></h1>
+
+<%= cl_image_tag @creature.photo.key, height: 300, width: 400, crop: :fill %>
 <p>Description</p>
-<button type="button">Book me!</button>
+<%= @creature.details %>
+<%= @creature.price %>
+
+<button type="button"><%= link_to "Book me!", new_creature_playtime_path(@creature) %></button>
+
+</div>
+

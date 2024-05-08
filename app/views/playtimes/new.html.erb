@@ -1,17 +1,22 @@
 <div class= "container">
-  <%= simple_form_for(creature) do |f| %>
+  <h1>Book your playtime !</h1>
+
+  <%= simple_form_for [@creature, @playtime] do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div>
-    <%= f.input :name %>
-    <%= f.input :planet_location %>
-    <%= f.input :details %>
-    <%= f.input :price %>
-    <%= f.input :photo, as: :file %>
+      <%= f.input :start_date %>
+    <%= f.input :end_date %>
   </div>
+
   <div>
     <%= f.submit %>
   </div>
+
   <% end %>
+
+  <div>
+    <%= link_to "Back to creatures", creatures_path %>
+  </div>
 </div>
