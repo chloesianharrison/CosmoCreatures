@@ -1,0 +1,38 @@
+// Index list cards
+.index-card {
+  position : relative;
+  border-radius: 20px;
+  padding: 0rem;
+  border: none;
+
+  .card-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &:hover{
+
+    box-shadow:rgba(0, 0, 0, 0.35) 1px 3px 5px 6px;
+
+    .index-img{
+      width: 330px;
+      height: 330px;
+    }
+
+  }
+
+  .index-img {
+    border-radius: 20px;
+  }
+
+}
+.card-text{
+  margin-top: 1rem;
+
+  h2 {
+    font-size: 16px;
+  }
+}

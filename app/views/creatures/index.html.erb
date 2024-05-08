@@ -1,19 +1,35 @@
+<nav class="d-flex navbar-lewagon m-0">
+<p>logo</p>
+<%= link_to "Add a new creature", new_creature_path %>
+<p>Rent a creature</p>
+<p>Your creatures</p>
+<p>Your bookings</p>
+</nav>
 
-<div class = "container">
-<h1>List all creatures</h1>
+
+<div class = "container text-center">
+<h1>All creatures</h1>
+
+<div class="d-flex flex-wrap justify-content-around">
 
 <% @creatures.each do |creature| %>
   <%# link for the show page %>
-  <%# <%= link_to creature_path do %>
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <h1 class="card-title"><%= creature.name %></h1>
-    <div class=card-body">
-      <h2><%= creature.planet_location %></h2>
+  <%# <%= link_to creature_path(creature) do %>
+  <div class="index-card card m-4 text-start">
+    <div class="img-cont">
+    <%# <img src="https://res.cloudinary.com/dsxdpqxra/image/upload/v1715101180/CosmoCreatures/big-ears-cute-creature_r5orh4.jpg" alt=""> %>
+      <%= cl_image_tag("CosmoCreatures/big-ears-cute-creature_r5orh4.jpg", width: 300, height: 300, class:"index-img") %>
+    </div>
+    <div class=card-text">
+      <h2><%= creature.name %></h2>
+      <h3><%= creature.planet_location %></3>
       <%= creature.details %>
       <p>£<%= creature.price %>0 per day</p>
+      <%= link_to '', creature_path(creature), class: 'card-link'  %>
     </div>
   </div>
   <%# <% end %>
 <% end %>
+</div>
+<%# https://res.cloudinary.com/dsxdpqxra/image/upload/v1715101180/CosmoCreatures/big-ears-cute-creature_r5orh4.jpg %>
 </div>
