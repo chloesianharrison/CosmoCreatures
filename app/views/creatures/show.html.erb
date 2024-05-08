@@ -14,5 +14,8 @@
 <p>Description</p>
 <%= @creature.details %>
 <%= @creature.price %>
-<button type="button">Book me!</button>
+
+<button type="button"><%= link_to "Book me!", new_creature_playtime_path(@creature) %></button>
+
 </div>
+
