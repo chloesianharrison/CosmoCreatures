@@ -1,8 +1,10 @@
 <nav class="d-flex navbar-lewagon m-0">
-  <p class="m-3"><i class="fa-solid fa-user-astronaut"></i></p>
+  <div class=d-flex>
+    <p class="m-3"><i class="fa-solid fa-user-astronaut"></i></p>
+    <%= link_to "Back to creatures", creatures_path, class:"m-3" %>
+  </div>
   <div class="d-flex">
     <%= link_to "Add a new creature", new_creature_path, class:"m-3" %>
-    <%= link_to "Back to creatures", creatures_path, class:"m-3" %>
     <a href="#" class="m-3">Your creatures</a>
     <a href="#" class="m-3">Your playtimes</a>
     <%= link_to "Log out", destroy_user_session_path, class: "m-3" %>
@@ -10,14 +12,19 @@
 </nav>
 
 
-<div class="container">
-<h1><%= @creature.name %></h1>
+<div class="container ">
+  <div class="d-flex justify-content-center m-3">
+    <div class="container p-3 mx-auto id-card">
+      <h1><%= @creature.name %></h1>
+      <%= cl_image_tag @creature.photo.key, height: 300, width: 400, crop: :fill %>
+      <h4 class="m-2">Description</h4>
+      <p><%= @creature.details %></p>
 
-<%= cl_image_tag @creature.photo.key, height: 300, width: 400, crop: :fill %>
-<p>Description</p>
-<%= @creature.details %>
-<%= @creature.price %>
+      <div class="d-flex justify-content-between pricing">
+      <h4>£<%= @creature.price %>0 per day</h4>
+      <button type="button"><%= link_to "Book me!", new_creature_playtime_path(@creature) %></button>
+      </div>
 
-<button type="button"><%= link_to "Book me!", new_creature_playtime_path(@creature) %></button>
-
+    </div>
+  </div>
 </div>
