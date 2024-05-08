@@ -14,7 +14,7 @@ class CreaturesController < ApplicationController
   def create
     @creature = Creature.new(creature_params)
     @creature.save
-    redirect_to creature_path(@creature)
+    redirect_to creatures_path(@creature)
   end
 
   private
