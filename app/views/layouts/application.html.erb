@@ -13,12 +13,14 @@
   </head>
 
   <body>
+
   <div class="home-container">
 
     <div class = container>
+
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-    </div>
+      <%= yield %>
 
     <%= render "layouts/navbar" %>
 
@@ -26,19 +28,19 @@
 
     <%# footer %>
 
-    <footer class="d-flex text-center justify-content-center">
-      <div class="foot-box p-3">
+    <footer class="d-flex text-center justify-content-center homepage-footer">
+      <div class="foot-box-homepage p-3">
         <a href="#"><i class="fa-brands fa-github"></i></a>
-        <figcaption>Emma</figcaption>
+        <figcaption class="blue">Emma</figcaption>
       </div>
       <div class="foot-box p-3">
         <a href="https://github.com/chloesianharrison" class="m-2"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/chloesian-harrison1/" class="m-2"><i class="fa-brands fa-linkedin"></i></a>
-        <figcaption>Chloe</figcaption>
+        <figcaption class="blue">Chloe</figcaption>
       </div>
-      <div class="foot-box p-3">
+      <div class="foot-box-homepage p-3">
         <a href="#"><i class="fa-brands fa-github"></i></a>
-        <figcaption>Haris</figcaption>
+        <figcaption class="blue">Haris</figcaption>
       </div>
     </footer>
 </div>
