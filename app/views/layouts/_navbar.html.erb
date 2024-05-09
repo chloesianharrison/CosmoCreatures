@@ -1,0 +1,20 @@
+
+ <nav class="d-flex navbar-lewagon m-0">
+  <div class=d-flex>
+    <p class="m-3"><i class="fa-solid fa-user-astronaut"></i></p>
+
+      <% unless (params[:controller] == "creatures") && (params[:action] == "index") %>
+        <%= link_to "Back to creatures", creatures_path, class:"m-3" %>
+    <% end %>
+  </div>
+  <div class="d-flex">
+    <% unless (params[:controller] == "creatures") && (params[:action] == "new") %>
+      <%= link_to "Add a new creature", new_creature_path, class:"m-3" %>
+    <% end %>
+    <a href="#" class="m-3">Your creatures</a>
+    <% if (controller_name != "playtimes") && (request.method != "index") %>
+      <%= link_to "Your playtimes", playtimes_path, class:"m-3" %>
+    <% end %>
+    <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
+  </div>
+</nav>
