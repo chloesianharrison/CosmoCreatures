@@ -1,3 +1,17 @@
+<nav class="d-flex navbar-lewagon m-0">
+  <p class="m-3"><i class="fa-solid fa-user-astronaut"></i></p>
+  <%= link_to "Back to creature", creature_path(@creature), class:"m-3" %>
+  <%= link_to "Back to all creatures", creatures_path, class:"m-3" %>
+  <div class="d-flex">
+    <%= link_to "Add a new creature", new_creature_path, class:"m-3" %>
+    <a href="#" class="m-3">Rent a creature</a>
+    <a href="#" class="m-3">Your creatures</a>
+    <a href="#" class="m-3">Your playtimes</a>
+    <%= link_to "Log out", destroy_user_session_path, class: "m-3" %>
+  </div>
+</nav>
+
+
 <div class= "container">
   <h1>Book your playtime !</h1>
 

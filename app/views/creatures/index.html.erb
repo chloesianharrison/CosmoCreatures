@@ -1,23 +1,23 @@
 <nav class="d-flex navbar-lewagon m-0">
-<p>logo</p>
-<%= link_to "Add a new creature", new_creature_path %>
-<p>Rent a creature</p>
-<p>Your creatures</p>
-<p>Your playtimes</p>
+  <p class="m-3"><i class="fa-solid fa-user-astronaut"></i></p>
+  <div class="d-flex">
+    <%= link_to "Add a new creature", new_creature_path, class:"m-3" %>
+    <a href="#" class="m-3">Rent a creature</a>
+    <a href="#" class="m-3">Your creatures</a>
+    <a href="#" class="m-3">Your playtimes</a>
+    <%= link_to "Log out", destroy_user_session_path, class: "m-3" %>
+  </div>
 </nav>
 
 
 <div class = "container text-center">
-<h1>All creatures</h1>
+<h1>All Creatures</h1>
 
 <div class="d-flex flex-wrap justify-content-around">
 
 <% @creatures.each do |creature| %>
-  <%# link for the show page %>
-  <%# <%= link_to creature_path(creature) do %>
   <div class="index-card card m-4 text-start">
     <div class="img-cont">
-    <%# <img src="https://res.cloudinary.com/dsxdpqxra/image/upload/v1715101180/CosmoCreatures/big-ears-cute-creature_r5orh4.jpg" alt=""> %>
       <%= cl_image_tag creature.photo.key, width: 300, height: 300, class:"index-img" %>
     </div>
     <div class="card-text">
@@ -28,8 +28,6 @@
       <%= link_to '', creature_path(creature), class: 'card-link'  %>
     </div>
   </div>
-  <%# <% end %>
 <% end %>
 </div>
-<%# https://res.cloudinary.com/dsxdpqxra/image/upload/v1715101180/CosmoCreatures/big-ears-cute-creature_r5orh4.jpg %>
 </div>

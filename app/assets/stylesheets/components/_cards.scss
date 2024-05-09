@@ -4,6 +4,7 @@
   border-radius: 20px;
   padding: 0rem;
   border: none;
+  font-family: $card-font;
 
   .card-link {
     position: absolute;
@@ -16,6 +17,8 @@
   &:hover{
 
     box-shadow:rgba(0, 0, 0, 0.35) 1px 3px 5px 6px;
+    background-color: #070F2B;
+    color: white;
 
     .index-img{
       width: 330px;
@@ -31,11 +34,44 @@
 }
 .card-text{
   margin-top: 1rem;
+  margin-left: 1rem;
+
 
   h2 {
     font-size: 25px;
   }
   h3 {
     font-size: 16px;
+  }
+}
+
+.id-card {
+  position: relative;
+  min-height: 38rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #070F2B;
+  color: white;
+  width: 450px;
+  border-radius: 20px;
+
+
+  h4 {
+    font-family: $card-font;
+  }
+
+  p{
+    font-family: $card-font;
+  }
+
+}
+
+.pricing {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+
+  button{
+    margin-left: 8rem;
   }
 }
