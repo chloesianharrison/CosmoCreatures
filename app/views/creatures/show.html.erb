@@ -6,7 +6,7 @@
   <div class="d-flex">
     <%= link_to "Add a new creature", new_creature_path, class:"m-3" %>
     <a href="#" class="m-3">Your creatures</a>
-    <a href="#" class="m-3">Your playtimes</a>
+    <%= link_to "Your playtimes", playtimes_path, class:"m-3" %>
     <%= link_to "Log out", destroy_user_session_path, class: "m-3" %>
   </div>
 </nav>
