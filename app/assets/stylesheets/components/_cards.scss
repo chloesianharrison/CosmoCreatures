@@ -75,3 +75,38 @@
     margin-left: 8rem;
   }
 }
+
+.play-card {
+  position: relative;
+  font-family: $card-font;
+  background-color: #070F2B;
+  color: white;
+
+  h3{
+    font-family: $card-font;
+  }
+  h5{
+    font-family: $card-font;
+  }
+
+
+
+  &:hover{
+    box-shadow:rgba(0, 0, 0, 0.35) 1px 3px 5px 6px;
+  }
+}
+
+.play-card a {
+
+  font-family: $card-font;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    font-size: 2rem;
+    padding: 0.5rem;
+    background-color: #535C91;
+    border-radius: 10px;
+
+  }
+}
