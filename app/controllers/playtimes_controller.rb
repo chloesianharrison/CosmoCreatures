@@ -5,9 +5,15 @@ class PlaytimesController < ApplicationController
   end
 
   def create
+    @creature = Creature.find(params[:creature_id])
     @playtime = Playtime.new(playtime_params)
-    @playtime.save
-    redirect_to creatures_path(@playtime)
+    @playtime.user = current_user
+    @playtime.creature = @creature
+    if @playtime.save
+      redirect_to playtimes_path
+    else
+      render :new
+    end
   end
 
   def index
@@ -21,6 +27,6 @@ class PlaytimesController < ApplicationController
   private
 
   def playtime_params
-    params.require(:playtime).permit(:start_date, :end_date)
+    params.require(:playtime).permit(:start_date)
   end
 end
