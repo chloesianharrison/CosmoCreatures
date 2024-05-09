@@ -22,6 +22,11 @@ class CreaturesController < ApplicationController
     end
   end
 
+  def owned
+    @creatures = Creature.where(user_id: current_user[:id])
+
+  end
+
   private
 
   def creature_params

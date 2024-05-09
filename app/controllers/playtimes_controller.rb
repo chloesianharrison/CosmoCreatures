@@ -18,7 +18,7 @@ class PlaytimesController < ApplicationController
 
   def index
     if user_signed_in?
-      @playtimes = Playtime.where(current_user == :user_id)
+      @playtimes = Playtime.where(user_id: current_user[:id])
     else
       redirect_to new_user_session_path
     end
