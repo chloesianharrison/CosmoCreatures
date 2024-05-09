@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     resources :playtimes, only: [:new, :create,]
   end
   resources :playtimes, only: [:index]
+  resources :creatures, only: [:destroy], as: :delete_creature
 end
