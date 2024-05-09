@@ -10,6 +10,14 @@ class PlaytimesController < ApplicationController
     redirect_to creatures_path(@playtime)
   end
 
+  def index
+    if user_signed_in?
+      @playtimes = Playtime.where(current_user == :user_id)
+    else
+      redirect_to new_user_session_path
+    end
+  end
+
   private
 
   def playtime_params

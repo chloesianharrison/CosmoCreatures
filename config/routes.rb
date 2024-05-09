@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :creatures do
-    resources :playtimes, only:[:new, :create]
+    resources :playtimes, only: [:new, :create,]
   end
+  resources :playtimes, only: [:index]
 end
