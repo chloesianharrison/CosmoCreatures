@@ -1,36 +1,25 @@
-<nav class="d-flex navbar-lewagon m-0">
-  <p class="m-3"><i class="fa-solid fa-user-astronaut"></i></p>
-  <%= link_to "Back to creature", creature_path(@creature), class:"m-3" %>
-  <%= link_to "Back to all creatures", creatures_path, class:"m-3" %>
-  <div class="d-flex">
-    <%= link_to "Add a new creature", new_creature_path, class:"m-3" %>
-    <a href="#" class="m-3">Rent a creature</a>
-    <a href="#" class="m-3">Your creatures</a>
-    <a href="#" class="m-3">Your playtimes</a>
-    <%= link_to "Log out", destroy_user_session_path, class: "m-3" %>
-  </div>
-</nav>
-
-
-<div class= "container">
+<div class= "container input-calendar">
   <h1>Book your playtime !</h1>
 
   <%= simple_form_for [@creature, @playtime] do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div>
-      <%= f.input :start_date %>
-    <%= f.input :end_date %>
+  <div class= "calendar">
+    <%= f.input :start_date,
+            as: :string,
+            label: "Booking dates:",
+            input_html: { data: { controller: "datepicker", alt_input: "true", inline: true, minDate: Date.today.strftime("%Y-%m-%d")} } %>
+            <%# input_html: { data: { controller: "datepicker", alt_input: "true", mode: "range", inline: true, minDate: Date.today.strftime("%Y-%m-%d")} } %>
   </div>
 
   <div>
-    <%= f.submit %>
+    <%= f.submit "Book", class: "btn btn-blue"%>
   </div>
 
   <% end %>
 
   <div>
-    <%= link_to "Back to creatures", creatures_path %>
+    <%= link_to "Back to creatures", creatures_path, class:"link-page"%>
   </div>
 </div>

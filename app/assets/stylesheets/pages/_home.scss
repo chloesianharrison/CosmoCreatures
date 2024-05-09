@@ -1,4 +1,11 @@
 // Specific CSS for your home-page
+.home-container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  min-height: 100vh;
+}
+
 .space{
   text-align: center;
   margin: 20px;

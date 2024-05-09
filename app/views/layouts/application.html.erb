@@ -8,12 +8,23 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   </head>
 
   <body>
+
+  <div class="home-container">
+
+    <div class = container>
+
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
       <%= yield %>
+
+    <%= render "layouts/navbar" %>
+
+  <%= yield %>
 
     <%# footer %>
 
@@ -32,6 +43,6 @@
         <figcaption class="blue">Haris</figcaption>
       </div>
     </footer>
-
+</div>
   </body>
 </html>
