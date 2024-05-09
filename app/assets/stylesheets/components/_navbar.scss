@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #070F2B;
   padding: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -11,4 +11,23 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-lewagon a {
+  font-family: $nav-font;
+  text-decoration: none;
+  margin: 0.5rem;
+  color: white;
+  padding: 0.5rem;
+
+  &:hover{
+  font-size: 1.5rem;
+  border-radius: 5px;
+  background-color: #535C91;
+  }
+}
+
+.navbar-lewagon i {
+  color: white;
+  font-size: 2rem;
 }
