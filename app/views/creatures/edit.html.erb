@@ -1,0 +1,22 @@
+<div class="container">
+<h1>Edit</h1>
+
+<div class= "container">
+  <%= simple_form_for(@creature) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div>
+    <%= f.input :name %>
+    <%= f.input :planet_location %>
+    <%= f.input :details %>
+    <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
+  </div>
+  <div>
+    <%= f.submit "Edit Creature", class: "btn btn-blue"%>
+  </div>
+  <% end %>
+</div>
+
+</div>

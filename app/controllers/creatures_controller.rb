@@ -6,6 +6,9 @@ class CreaturesController < ApplicationController
 
   def index
     @creatures = Creature.all
+    if params[:query].present?
+      @creatures = @creatures.where("name ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def new
@@ -24,7 +27,22 @@ class CreaturesController < ApplicationController
 
   def owned
     @creatures = Creature.where(user_id: current_user[:id])
+  end
 
+  def edit
+    @creature = Creature.find(params[:id])
+  end
+
+  def update
+    @creature = Creature.find(params[:id])
+    @creature.update(creature_params)
+    redirect_to owned_path
+  end
+
+  def destroy
+    @creature = Creature.find(params[:id])
+    Creature.destroy(params[:id])
+    redirect_to owned_path
   end
 
   private
