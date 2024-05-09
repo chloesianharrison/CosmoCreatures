@@ -23,16 +23,17 @@
     <%= f.input :start_date,
             as: :string,
             label: "Booking dates:",
-            input_html: { data: { controller: "datepicker", alt_input: "true", mode: "range", inline: true, minDate: Date.today.strftime("%Y-%m-%d")} } %>
+            input_html: { data: { controller: "datepicker", alt_input: "true", inline: true, minDate: Date.today.strftime("%Y-%m-%d")} } %>
+            <%# input_html: { data: { controller: "datepicker", alt_input: "true", mode: "range", inline: true, minDate: Date.today.strftime("%Y-%m-%d")} } %>
   </div>
 
   <div>
-    <%= f.submit class: "btn btn-blue"%>
+    <%= f.submit "Book", class: "btn btn-blue"%>
   </div>
 
   <% end %>
 
   <div>
-    <%= link_to "Back to creatures", creatures_path, class:"link"%>
+    <%= link_to "Back to creatures", creatures_path, class:"link-page"%>
   </div>
 </div>

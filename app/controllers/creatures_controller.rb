@@ -1,6 +1,7 @@
 class CreaturesController < ApplicationController
   def show
     @creature = Creature.find(params[:id])
+    @playtime = Playtime.new
   end
 
   def index
