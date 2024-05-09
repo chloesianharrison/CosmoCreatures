@@ -9,7 +9,7 @@
 
       <div class="d-flex justify-content-between pricing">
       <h4>£<%= @creature.price %>0 per day</h4>
-      <button type="button"><%= link_to "Book me!", new_creature_playtime_path(@creature) %></button>
+      <button class="btn-hidden" type="button"><%= link_to "Book me!", new_creature_playtime_path(@creature) %></button>
       </div>
     </div>
 
@@ -35,9 +35,6 @@
 
         <% end %>
 
-      <div>
-        <%= link_to "Back to creatures", creatures_path, class:"link-page"%>
-      </div>
     </div>
   </div>
 </div>

@@ -3,11 +3,11 @@
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div>
+  <div class="form-new">
     <%= f.input :name %>
     <%= f.input :planet_location %>
     <%= f.input :details %>
-    <%= f.input :price %>
+    <%= f.input :price, label: "Price (£)" %>
     <%= f.input :photo, as: :file %>
   </div>
   <div>
