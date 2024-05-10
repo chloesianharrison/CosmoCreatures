@@ -33,7 +33,7 @@ puts "starting to create"
   friend = Creature.new(
     name: Faker::Creature::Cat.name,
     planet_location: Faker::Space.planet,
-    details: nil,
+    details: "With a personality as vibrant as the galaxies themselves,  they are endlessly curious, always eager to explore new worlds and make new friends. Their playful antics and infectious enthusiasm will brighten even the darkest corners of space, making every moment spent in their company an unforgettable joyride through the cosmos.",
     price: rand(1..200)
   )
   puts "friend created"
