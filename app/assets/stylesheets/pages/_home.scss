@@ -160,7 +160,7 @@
   height: 100%;
   background: #000;
   // position: fixed;
-  z-index: -1;
+  z-index: -10;
   top: 0;
   left: 0;
   opacity: 0.3;
@@ -171,7 +171,7 @@
       opacity: 0.5;
   }
   to {
-      transform: translateZ(0);
+      transform: translateZ(-10px);
       opacity: 0.5;
   }
 }
