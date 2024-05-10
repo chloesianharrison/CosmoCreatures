@@ -35,4 +35,20 @@
 .btn-creature-container {
   text-align: center;
   margin-top: 15px;;
+
+
+#homepage-button{
+  color:  #3d57bd;
+  background-color: white;
+  opacity: 0.7;
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 5px
+}
+
+#homepage-button:hover{
+  background-color: lightgrey;
+  color: #192450;
+
 }

@@ -1,27 +1,29 @@
 
 <nav class="d-flex navbar-lewagon m-0">
   <div class="d-flex">
-    <p class="m-3"><i class="fa-solid fa-user-astronaut"></i></p>
+    <%= link_to(root_path) do  %>
+      <p><i class="fa-solid fa-user-astronaut m-3"></i></p>
+    <% end %>
     <% if params[:controller] == "pages" then %>
-      <%= link_to "Sign up", new_user_registration_path, class: "m-3"%>
+      <%= link_to "Sign up", new_user_registration_path, class: "m-3 nav-link"%>
       <%= link_to "Login", new_user_session_path, class: "m-3" %>
     <% end %>
     <% unless params[:controller] == "pages" then %>
     <% unless (params[:controller] == "creatures") && (params[:action] == "index") then %>
-      <%= link_to "Back to creatures", creatures_path, class:"m-3" %>
+      <%= link_to "Back to creatures", creatures_path, class:"m-3 nav-link" %>
     <% end %>
   </div>
   <div class="d-flex">
     <% unless (params[:controller] == "creatures") && (params[:action] == "new") then %>
-      <%= link_to "Add a new creature", new_creature_path, class:"m-3" %>
+      <%= link_to "Add a new creature", new_creature_path, class:"m-3 nav-link" %>
     <% end %>
     <% unless (params[:action] == "owned") then %>
-      <%= link_to "My creatures", owned_path, class:"m-3" %>
+      <%= link_to "My creatures", owned_path, class:"m-3 nav-link" %>
     <% end %>
     <% if (controller_name != "playtimes") && (request.method != "index") then %>
-      <%= link_to "My playtimes", playtimes_path, class:"m-3" %>
+      <%= link_to "My playtimes", playtimes_path, class:"m-3 nav-link" %>
     <% end %>
-    <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
+    <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class:"m-3 nav-link"  %>
   </div>
   <% end %>
 </nav>

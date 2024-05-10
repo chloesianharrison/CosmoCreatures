@@ -2,14 +2,15 @@
 <div class="container">
 <h1>My playtimes</h1>
 
+<% if @playtimes  %>
 <% @playtimes.each do |time| %>
   <div class="card play-card p-2 m-3">
     <% @creature = time.creature %>
     <h3>Creature: <%= link_to time.creature.name, creature_path(@creature) %></h3>
     <h5>Owner: <%= time.creature.user.email %></h5>
     <p>From <%= time.start_date.strftime("%B %-d %Y") %> to <%= time.end_date.strftime("%B %-d %Y") %></p>
-
   </div>
+  <% end %>
 <% end %>
 
 </div>
