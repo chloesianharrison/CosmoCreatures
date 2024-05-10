@@ -6,7 +6,11 @@ class PlaytimesController < ApplicationController
 
   def create
     @creature = Creature.find(params[:creature_id])
-    @playtime = Playtime.new(playtime_params)
+
+    date_range = params[:playtime][:start_date]
+    dates = date_range.split(' to ')
+
+    @playtime = Playtime.new(start_date: dates[0], end_date: dates[1])
     @playtime.user = current_user
     @playtime.creature = @creature
     if @playtime.save
@@ -23,10 +27,5 @@ class PlaytimesController < ApplicationController
       redirect_to new_user_session_path
     end
   end
-
-  private
-
-  def playtime_params
-    params.require(:playtime).permit(:start_date)
-  end
+  
 end

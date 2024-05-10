@@ -8,9 +8,7 @@
     <% @creature = time.creature %>
     <h3>Creature: <%= link_to time.creature.name, creature_path(@creature) %></h3>
     <h5>Owner: <%= time.creature.user.email %></h5>
-    <% unless time.start_date == nil then %>
-      <h5><%= time.start_date.to_fs(:rfc822) %></h5>
-    <% end %>
+    <p>From <%= time.start_date.strftime("%B %-d %Y") %> to <%= time.end_date.strftime("%B %-d %Y") %></p>
   </div>
   <% end %>
 <% end %>
