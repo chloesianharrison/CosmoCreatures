@@ -47,9 +47,10 @@
 
 .id-card {
   position: relative;
-  height: 38rem;
+  min-height: 38rem;
+  padding-bottom: 2rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   background-color: #070F2B;
   color: white;
   width: 450px;
@@ -68,13 +69,12 @@
 
 .pricing {
   position: absolute;
-  bottom: 1rem;
-  left: 2rem;
+  bottom: 0rem;
+  left: 1rem;
 
   button{
     margin-left: 8rem;
   }
-
 }
 
 .pricing .button{

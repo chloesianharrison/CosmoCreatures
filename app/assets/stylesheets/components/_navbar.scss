@@ -16,12 +16,12 @@
 .navbar-lewagon a {
   font-family: $nav-font;
   text-decoration: none;
-  margin: 0.5rem;
+  margin-left: 0.5rem;
   color: white;
-  padding: 0.5rem;
+
 
   &:hover{
-  font-size: 1.5rem;
+  // font-size: 1.5rem;
   border-radius: 5px;
   background-color: #535C91;
   color: white;
@@ -31,4 +31,10 @@
 .navbar-lewagon i {
   color: white;
   font-size: 2rem;
+  padding: 0rem;
+}
+
+.nav-link {
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
