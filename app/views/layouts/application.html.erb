@@ -14,44 +14,42 @@
 
   <body>
 
-  <div class="home-container">
+    <div class="home-container">
 
-    <div class = container>
-
-      <p class="notice m-0"><%= notice %></p>
-      <p class="alert m-0"><%= alert %></p>
-
-
-    <%= render "layouts/navbar" %>
-
-
-
-
-
-  <%= yield %>
-
-    <%# footer %>
-
-    <footer class="d-flex text-center justify-content-center ">
-      <div class="foot-box p-3">
-        <a href="https://github.com/emmafmx"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/emmafumeaux/" class="m-2"><i class="fa-brands fa-linkedin"></i></a>
-        <figcaption >Emma</figcaption>
+      <div class="container">
+        <p class="notice m-0"><%= notice %></p>
+        <p class="alert m-0"><%= alert %></p>
       </div>
-      <div class="foot-box p-3">
-        <a href="https://github.com/chloesianharrison" class="m-2"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/chloesian-harrison1/" class="m-2"><i class="fa-brands fa-linkedin"></i></a>
-        <figcaption >Chloe</figcaption>
-      </div>
-      <div class="foot-box p-3">
-        <a href="https://github.com/HY-005"><i class="fa-brands fa-github"></i></a>
-        <a href="www.linkedin.com/in/haris-yousaf-h005" class="m-2"><i class="fa-brands fa-linkedin"></i></a>
-        <figcaption >Haris</figcaption>
-      </div>
-    </footer>
+      <%= render "layouts/navbar" %>
 
 
-</div>
+
+
+
+      <%= yield %>
+
+      <%# footer %>
+
+      <footer class="d-flex text-center justify-content-center ">
+        <div class="foot-box p-3">
+          <a href="https://github.com/emmafmx"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/emmafumeaux/" class="m-2"><i class="fa-brands fa-linkedin"></i></a>
+          <figcaption >Emma</figcaption>
+        </div>
+        <div class="foot-box p-3">
+          <a href="https://github.com/chloesianharrison" class="m-2"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/chloesian-harrison1/" class="m-2"><i class="fa-brands fa-linkedin"></i></a>
+          <figcaption >Chloe</figcaption>
+        </div>
+        <div class="foot-box p-3">
+          <a href="https://github.com/HY-005"><i class="fa-brands fa-github"></i></a>
+          <a href="www.linkedin.com/in/haris-yousaf-h005" class="m-2"><i class="fa-brands fa-linkedin"></i></a>
+          <figcaption >Haris</figcaption>
+        </div>
+      </footer>
+
+
+    </div>
 
   </body>
 </html>
