@@ -1,7 +1,9 @@
 
 <nav class="d-flex navbar-lewagon m-0">
   <div class="d-flex">
-    <p class="m-3"><i class="fa-solid fa-user-astronaut"></i></p>
+    <%= link_to(root_path) do  %>
+      <p><i class="fa-solid fa-user-astronaut m-3"></i></p>
+    <% end %>
     <% if params[:controller] == "pages" then %>
       <%= link_to "Sign up", new_user_registration_path, class: "m-3"%>
       <%= link_to "Login", new_user_session_path, class: "m-3" %>
