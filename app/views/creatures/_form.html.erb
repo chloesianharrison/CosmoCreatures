@@ -1,17 +1,21 @@
 <div class= "container">
-  <%= simple_form_for(creature) do |f| %>
-    <%= f.error_notification %>
-    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <div class="card card-add-creature">
+    <%= simple_form_for(creature) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-new">
-    <%= f.input :name %>
-    <%= f.input :planet_location %>
-    <%= f.input :details %>
-    <%= f.input :price, label: "Price (£)" %>
-    <%= f.input :photo, as: :file %>
+    <div class= "input-creature">
+      <%= f.input :name %>
+      <%= f.input :planet_location %>
+      <%= f.input :details %>
+      <%= f.input :price, label: "Price (£)" %>
+      <%= f.input :photo, as: :file %>
+    </div>
+
+    <div class="btn-creature-container">
+      <%= f.submit "Add Creature", class: "btn btn-blue btn-creature"%>
+    </div>
+
+    <% end %>
   </div>
-  <div>
-    <%= f.submit "Add Creature", class: "btn btn-blue"%>
-  </div>
-  <% end %>
 </div>
